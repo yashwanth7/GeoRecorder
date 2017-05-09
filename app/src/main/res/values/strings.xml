@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">GeoRecorder</string>
+    <string name="action_settings">Settings</string>
+    <string name="title_activity_oncreate1">Oncreate1</string>
+    <string name="title_activity_maps">Map</string>
+    <string name="title_activity_closing">closing</string>
+    <string name="hello_round">Hello Round World!</string>
+    <string name="hello_square">Hello Square World!</string>
+</resources>

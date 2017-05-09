@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context="com.example.lsyas.georecorder.closing"
+    tools:showIn="@layout/activity_closing"
+    android:background="#405a92">
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="close project"
+        android:padding="10dp"
+        android:paddingRight="10dp"
+        android:onClick="onclose"
+        android:id="@+id/button"
+        android:layout_below="@+id/button3"
+        android:layout_toEndOf="@+id/button2"
+        android:layout_marginTop="127dp"
+        android:background="#fdfefe" />
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="view project"
+        android:padding="10dp"
+        android:paddingRight="130dp"
+        android:onClick="onview"
+        android:layout_alignTop="@+id/button2"
+        android:layout_alignParentEnd="true"
+        android:id="@+id/button3" />
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="export project"
+        android:padding="10dp"
+        android:layout_marginTop="110dp"
+        android:paddingRight="10dp"
+        android:onClick="exported"
+        android:id="@+id/button2"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentStart="true" />
+
+</RelativeLayout>
