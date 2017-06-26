@@ -30,6 +30,7 @@ public class DatabaseHelper extends SQLiteOpenHelper {
     public static final String T2_Col1 = "ID";
     public static final String T2_Col2 = "LAT";
     public static final String T2_Col3 = "LONG";
+    public static final String T2_Col4 = "COMMENT";
 
     public DatabaseHelper(Context context) {
         super(context, DATABASE_NAME, null, 1);
@@ -39,7 +40,7 @@ public class DatabaseHelper extends SQLiteOpenHelper {
     @Override
     public void onCreate(SQLiteDatabase db) {
         db.execSQL("CREATE TABLE "+TABLE1_NAME+"(NAME TEXT PRIMARY KEY)");
-        db.execSQL("CREATE TABLE " + TABLE2_NAME + "( ID INTEGER PRIMARY KEY   AUTOINCREMENT,LAT REAL ,LONG REAL )");
+        db.execSQL("CREATE TABLE " + TABLE2_NAME + "( ID INTEGER PRIMARY KEY   AUTOINCREMENT,LAT REAL ,LONG REAL,COMMENT TEXT )");
     }
 
     @Override
@@ -60,11 +61,12 @@ public class DatabaseHelper extends SQLiteOpenHelper {
         return true;
     }
 
-    public boolean InsertProjectData(Double LAT,Double LONG){
+    public boolean InsertProjectData(Double LAT,Double LONG,String COMMENT){
         SQLiteDatabase db = this.getWritableDatabase();
         ContentValues cv = new ContentValues();
         cv.put(T2_Col2, LAT);
         cv.put(T2_Col3,LONG);
+        cv.put(T2_Col4,COMMENT);
         long res = db.insert(TABLE2_NAME,null,cv);
         if(res == -1)
             return false;

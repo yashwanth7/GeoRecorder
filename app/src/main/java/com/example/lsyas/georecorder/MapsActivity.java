@@ -151,14 +151,17 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
     }
     public void onrecord(View view)
     {
+        Intent i =new Intent(this,PopUp.class);
+        i.putExtra("firstmsg",lat);
+        i.putExtra("secondmsg",longi);
+        startActivity(i);
 
-        boolean isInsertd = myDB.InsertProjectData(lat,longi);
+        /*boolean isInsertd = myDB.InsertProjectData(lat,longi);
         if (isInsertd) {
             Toast.makeText(MapsActivity.this, "Project Created!", Toast.LENGTH_SHORT).show();
         } else {
             Toast.makeText(MapsActivity.this, "Project Name Allready Exists!", Toast.LENGTH_SHORT).show();
-        }
-
+        }*/
 
 
     }
@@ -176,6 +179,7 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
             str.append("id:"+res.getString(0)+"\n");
             str.append("longi:"+res.getString(1)+"\n");
             str.append("lati:"+res.getString(2)+"\n");
+            //str.append("comments:"+res.getString(3)+"\n");
             //str.append("comments:"+res.getString(3)+"\n");
 
         }

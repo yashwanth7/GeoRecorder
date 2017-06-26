@@ -40,6 +40,7 @@ public class closing extends AppCompatActivity {
             str.append("id:"+res.getString(0)+"\n");
             str.append("longi:"+res.getString(1)+"\n");
             str.append("lati:"+res.getString(2)+"\n");
+            str.append("comments:"+res.getString(3)+"\n");
             //str.append("comments:"+res.getString(3)+"\n");
 
         }

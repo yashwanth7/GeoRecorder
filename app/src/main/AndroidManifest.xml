@@ -48,6 +48,9 @@
             android:name=".closing"
             android:label="@string/title_activity_closing"
             android:theme="@style/AppTheme.NoActionBar"></activity>
+        <activity android:name=".PopUp"
+            android:theme="@style/AppTheme.CustomTheme">
+        </activity>
     </application>
 
 </manifest>
